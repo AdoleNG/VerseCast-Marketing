@@ -120,58 +120,16 @@ export default function VerseCastMarketingSite() {
   ];
 
   return (
-    
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-          <div className="flex items-center gap-3">
-            <img src={verseCastLogo} alt="VerseCast Logo" className="h-10 w-auto" />
-            <div>
-              <div className="text-lg font-semibold tracking-tight text-[#2b124c]">
-                VerseCast
-              </div>
-              <div className="text-xs text-slate-500">
-                AI-driven Bible display for churches
-              </div>
-            </div>
-          </div>
+    <div className="min-h-screen bg-white text-slate-900 font-sans">
 
-          <nav className="hidden items-center gap-8 text-sm text-slate-600 md:flex">
-            <a href="#how-it-works" className="transition hover:text-[#2b124c]">
-              How it works
-            </a>
-            <a href="#benefits" className="transition hover:text-[#2b124c]">
-              Benefits
-            </a>
-            <a href="#pricing" className="transition hover:text-[#2b124c]">
-              Pricing
-            </a>
-            <a href="#contact" className="transition hover:text-[#2b124c]">
-              Contact
-            </a>
-          </nav>
-
-          <div className="hidden md:block">
-            <a
-              href="#contact"
-              className="rounded-xl bg-[#2b124c] px-4 py-2 text-sm font-medium text-white transition hover:opacity-95"
-            >
-              Book a Demo
-            </a>
-          </div>
-        </div>
-      </header>
-
+      {/* HERO — mockup-accurate, no header */}
       <main>
-        {/* HERO */}
-        <section className="px-6 py-20 text-center lg:px-8">
+        <section className="px-6 pt-16 pb-20 text-center lg:px-8">
           <img
             src={verseCastLogo}
             alt="VerseCast Logo"
-            className="mx-auto h-20 w-auto mb-6"
+            className="mx-auto h-20 w-auto mb-8"
           />
-
-          <div className="inline-flex w-fit mx-auto mb-6 items-center rounded-full border border-[#f9e79f]/60 bg-[#fff9db] px-4 py-1 text-sm font-medium text-[#6a5712]">
-            Built for churches, conferences, and ministry teams
-          </div>
 
           <h1 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-[#2b124c] sm:text-5xl lg:text-6xl">
             Help your congregation follow the sermon with Scripture on screen in real time.
@@ -210,7 +168,7 @@ export default function VerseCastMarketingSite() {
           </div>
         </section>
 
-        {/* CONTROL PANEL MOCKUP */}
+        {/* CONTROL PANEL MOCKUP — directly under hero */}
         <section className="px-6 pb-20 lg:px-8">
           <div className="mx-auto max-w-3xl">
             <div className="rounded-[28px] border border-slate-200 bg-white p-4 shadow-2xl shadow-slate-200/70">
@@ -301,169 +259,3 @@ export default function VerseCastMarketingSite() {
             </div>
           </div>
         </section>
-
-        {/* BENEFITS */}
-        <section id="benefits" className="py-20">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl text-center">
-              <div className="text-sm font-semibold uppercase tracking-[0.22em] text-[#2b124c]">
-                Benefits
-              </div>
-              <h2 className="mt-3 text-3xl font-bold tracking-tight text-[#2b124c] sm:text-4xl">
-                More ministry value, less technical distraction.
-              </h2>
-            </div>
-
-            <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {benefitCards.map(([title, text]) => (
-                <div
-                  key={title}
-                  className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md"
-                >
-                  <div className="inline-flex rounded-2xl bg-[#f6f0ff] px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-[#2b124c]">
-                    Value
-                  </div>
-                  <h3 className="mt-4 text-xl font-semibold text-[#2b124c]">
-                    {title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-7 text-slate-600">{text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* PRICING */}
-        <section
-          id="pricing"
-          className="border-y border-slate-200 bg-slate-50 py-20"
-        >
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl text-center">
-              <div className="text-sm font-semibold uppercase tracking-[0.22em] text-[#2b124c]">
-                Pricing
-              </div>
-              <h2 className="mt-3 text-3xl font-bold tracking-tight text-[#2b124c] sm:text-4xl">
-                Simple plans for church adoption.
-              </h2>
-              <p className="mt-4 text-base leading-8 text-slate-600">
-                Placeholder pricing for your marketing launch. You can adjust
-                these later when you finalize packaging.
-              </p>
-            </div>
-
-            <div className="mt-12 grid gap-6 lg:grid-cols-3">
-              {pricingPlans.map(([title, price, features]) => (
-                <div
-                  key={title}
-                  className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm"
-                >
-                  <div className="text-lg font-semibold text-[#2b124c]">
-                    {title}
-                  </div>
-                  <div className="mt-3 text-4xl font-bold tracking-tight text-[#2b124c]">
-                    {price}
-                  </div>
-                  <ul className="mt-6 space-y-3 text-sm text-slate-600">
-                    {features.map((feature) => (
-                      <li key={feature}>• {feature}</li>
-                    ))}
-                  </ul>
-                  <a
-                    href="#contact"
-                    className="mt-8 inline-flex rounded-2xl bg-[#2b124c] px-5 py-3 text-sm font-semibold text-white transition hover:opacity-95"
-                  >
-                    Talk to Sales
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* WHO IT'S FOR */}
-        <section className="bg-[#2b124c] py-20 text-white">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-              <div>
-                <div className="text-sm font-semibold uppercase tracking-[0.22em] text-[#f9e79f]">
-                  Who it’s for
-                </div>
-                <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
-                  Churches, conferences, and ministry teams that want Bible on
-                  screen without delay.
-                </h2>
-                <p className="mt-5 max-w-2xl text-base leading-8 text-slate-200">
-                  VerseCast is a strong fit for churches that value live
-                  teaching clarity, smoother media workflows, and a more
-                  connected congregational experience.
-                </p>
-              </div>
-
-              <div className="grid gap-4">
-                {useCases.map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-2xl border border-white/15 bg-white/5 px-5 py-4 text-sm font-medium text-slate-100 backdrop-blur-sm"
-                  >
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CONTACT */}
-        <section className="py-20">
-          <div className="mx-auto max-w-5xl px-6 lg:px-8">
-            <div className="rounded-[32px] border border-slate-200 bg-slate-50 p-8 shadow-sm sm:p-12">
-              <div className="max-w-3xl">
-                <div className="text-sm font-semibold uppercase tracking-[0.22em] text-[#2b124c]">
-                  Get started
-                </div>
-                <h2 className="mt-3 text-3xl font-bold tracking-tight text-[#2b124c] sm:text-4xl">
-                  Launch VerseCast for your church.
-                </h2>
-                <p className="mt-4 text-base leading-8 text-slate-600">
-                  Request a live demo, join the early access list, or start
-                  conversations about using VerseCast in your ministry.
-                </p>
-              </div>
-
-              <div id="contact" className="mt-8">
-                <iframe
-                  src="https://tally.so/embed/0QMkX6?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                  width="100%"
-                  height="300"
-                  frameBorder="0"
-                  marginHeight="0"
-                  marginWidth="0"
-                  title="VerseCast Waitlist"
-                ></iframe>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      {/* FOOTER */}
-      <footer className="border-t border-slate-200 bg-white">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between lg:px-8">
-          <div>© 2026 VerseCast. Illuminating lives with the Word real-time.</div>
-          <div className="flex gap-6">
-            <a href="#benefits" className="transition hover:text-slate-900">
-              Benefits
-            </a>
-            <a href="#pricing" className="transition hover:text-slate-900">
-              Pricing
-            </a>
-            <a href="#contact" className="transition hover:text-slate-900">
-              Contact
-            </a>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-}
