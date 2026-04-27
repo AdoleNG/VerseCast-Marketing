@@ -599,13 +599,5 @@ const styles = {
     borderRadius: 36,
     padding: 56,
   },
-  contactTitle: { marginTop: 24, fontSize: 52, lineHeight: 1.1, fontWeight: 900 },
-  contactText: { marginTop: 22, fontSize: 18, lineHeight: 1.7, color: "#475569" },
-  footer: {
-    borderTop: "1px solid #e5e7eb",
-    padding: "34px 40px",
-    textAlign: "center",
-    color: "#64748b",
-    fontSize: 14,
-  },
+ 
 };
