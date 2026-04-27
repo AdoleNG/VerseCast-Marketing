@@ -121,103 +121,148 @@ export default function VerseCastMarketingSite() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans">
+      {/* HEADER (matches mockup) */}
+      <header className="sticky top-0 z-30 border-b border-slate-200/80 bg-white/90 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+          <div className="flex items-center gap-3">
+            <img src={verseCastLogo} alt="VerseCast Logo" className="h-9 w-auto" />
+            <div>
+              <div className="text-base font-semibold tracking-tight text-[#2b124c]">
+                VerseCast
+              </div>
+              <div className="text-xs text-slate-500">
+                AI-driven Bible display for churches
+              </div>
+            </div>
+          </div>
 
-      {/* HERO — mockup-accurate */}
-      <main>
-        <section className="px-6 pt-16 pb-20 text-center lg:px-8">
-          <img
-            src={verseCastLogo}
-            alt="VerseCast Logo"
-            className="mx-auto h-20 w-auto mb-8"
-          />
+          <nav className="hidden items-center gap-8 text-sm text-slate-600 md:flex">
+            <a href="#how-it-works" className="transition hover:text-[#2b124c]">
+              How it works
+            </a>
+            <a href="#benefits" className="transition hover:text-[#2b124c]">
+              Benefits
+            </a>
+            <a href="#pricing" className="transition hover:text-[#2b124c]">
+              Pricing
+            </a>
+            <a href="#contact" className="transition hover:text-[#2b124c]">
+              Contact
+            </a>
+          </nav>
 
-          <h1 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-[#2b124c] sm:text-5xl lg:text-6xl">
-            Help your congregation follow the sermon with Scripture on screen in real time.
-          </h1>
-
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-            VerseCast is an AI-powered Bible display platform designed to help churches project Scripture seamlessly during live sermons. As the minister speaks, VerseCast recognizes Bible references and surfaces the right passage instantly—keeping the message flowing and the congregation engaged.
-          </p>
-
-          <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+          <div className="hidden md:block">
             <a
               href="#contact"
-              className="rounded-2xl bg-[#2b124c] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:translate-y-[-1px]"
+              className="rounded-xl bg-[#2b124c] px-4 py-2 text-sm font-medium text-white transition hover:opacity-95"
             >
               Book a Demo
             </a>
-            <a
-              href="#benefits"
-              className="rounded-2xl border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
-            >
-              See the Benefits
-            </a>
           </div>
+        </div>
+      </header>
 
-          {/* HERO CARDS */}
-          <div className="mt-12 grid max-w-3xl mx-auto grid-cols-1 gap-4 sm:grid-cols-3">
-            {heroCards.map(([title, text]) => (
-              <div
-                key={title}
-                className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm"
-              >
-                <div className="text-sm font-semibold text-[#2b124c]">{title}</div>
-                <div className="mt-1 text-sm text-slate-600">{text}</div>
+      <main>
+        {/* HERO (two-column, matches mockup) */}
+        <section className="px-6 py-16 lg:px-8">
+          <div className="mx-auto flex max-w-7xl flex-col gap-12 lg:grid lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-center">
+            {/* Left: text */}
+            <div>
+              <div className="inline-flex items-center rounded-full border border-[#f9e79f]/70 bg-[#fff9db] px-4 py-1 text-xs font-medium text-[#6a5712]">
+                Built for churches, conferences, and ministry teams
               </div>
-            ))}
-          </div>
-        </section>
 
-        {/* CONTROL PANEL MOCKUP */}
-        <section className="px-6 pb-20 lg:px-8">
-          <div className="mx-auto max-w-3xl">
-            <div className="rounded-[28px] border border-slate-200 bg-white p-4 shadow-2xl shadow-slate-200/70">
-              <div className="rounded-[22px] border border-slate-200 bg-slate-50 p-4">
-                <div className="mb-4 flex items-center justify-between">
-                  <div>
-                    <div className="text-sm font-semibold text-[#2b124c]">
-                      VerseCast Control Panel
-                    </div>
-                    <div className="text-xs text-slate-500">
-                      Session: Sunday Morning Service
-                    </div>
-                  </div>
-                  <div className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700">
-                    Live
-                  </div>
-                </div>
+              <h1 className="mt-5 max-w-xl text-4xl font-bold tracking-tight text-[#2b124c] sm:text-5xl lg:text-6xl">
+                Help your congregation follow the sermon with Bible on screen in real time.
+              </h1>
 
-                <div className="rounded-2xl border border-slate-200 bg-white p-4">
-                  <div className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
-                    Incoming sermon audio
-                  </div>
-                  <div className="mt-3 rounded-xl bg-slate-50 p-4 text-sm leading-7 text-slate-700">
-                    “Turn with me to Romans chapter 3 verse 23...”
-                  </div>
-                </div>
+              <p className="mt-5 max-w-xl text-sm sm:text-base leading-7 sm:leading-8 text-slate-600">
+                VerseCast is an AI-powered Bible display platform designed to help churches project Scripture seamlessly during live sermons.
+                As the minister speaks, VerseCast automatically recognizes explicit Bible references and displays them on screen without any
+                manual input. When a speaker paraphrases a passage, VerseCast intelligently surfaces the matching Bible passage on the Control
+                Panel, allowing the media team to quickly confirm and project it. This keeps the minister’s flow uninterrupted and ensures the
+                congregation always sees the right verse at the right time.
+              </p>
 
-                <div className="mt-4 grid gap-4 lg:grid-cols-2">
-                  <div className="rounded-2xl border border-[#f3e2a0] bg-[#fff9e6] p-4">
-                    <div className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8a6f16]">
-                      Detected Bible passage
+              <div className="mt-7 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
+                <a
+                  href="#contact"
+                  className="rounded-2xl bg-[#2b124c] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:translate-y-[-1px]"
+                >
+                  Book a Demo
+                </a>
+                <a
+                  href="#benefits"
+                  className="rounded-2xl border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
+                >
+                  See the Benefits
+                </a>
+              </div>
+
+              {/* Optional hero cards under text (can be removed if not in mockup) */}
+              <div className="mt-10 grid max-w-xl grid-cols-1 gap-4 sm:grid-cols-3">
+                {heroCards.map(([title, text]) => (
+                  <div
+                    key={title}
+                    className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm"
+                  >
+                    <div className="text-xs font-semibold text-[#2b124c]">{title}</div>
+                    <div className="mt-1 text-xs text-slate-600">{text}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right: control panel mockup */}
+            <div className="lg:justify-self-end">
+              <div className="rounded-[28px] border border-slate-200 bg-white p-4 shadow-2xl shadow-slate-200/70">
+                <div className="rounded-[22px] border border-slate-200 bg-slate-50 p-4">
+                  <div className="mb-4 flex items-center justify-between">
+                    <div>
+                      <div className="text-sm font-semibold text-[#2b124c]">
+                        VerseCast Control Panel
+                      </div>
+                      <div className="text-xs text-slate-500">
+                        Session: Sunday Morning Service
+                      </div>
                     </div>
-                    <div className="mt-3 text-lg font-semibold text-[#2b124c]">
-                      Romans 3:23
-                    </div>
-                    <div className="mt-2 text-sm leading-7 text-slate-700">
-                      For all have sinned, and come short of the glory of God;
+                    <div className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700">
+                      Live
                     </div>
                   </div>
 
-                  <div className="rounded-2xl border border-slate-200 bg-[#2b124c] p-4 text-white">
-                    <div className="text-xs font-semibold uppercase tracking-[0.18em] text-[#f9e79f]">
-                      Presenter view
+                  <div className="rounded-2xl border border-slate-200 bg-white p-4">
+                    <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+                      Incoming sermon audio
                     </div>
-                    <div className="mt-4 text-2xl font-semibold text-[#f9e79f]">
-                      Romans 3:23
+                    <div className="mt-3 rounded-xl bg-slate-50 p-3 text-xs leading-6 text-slate-700">
+                      “Turn with me to Romans chapter 3 verse 23…”
                     </div>
-                    <div className="mt-3 text-sm leading-7 text-slate-100">
-                      For all have sinned, and come short of the glory of God;
+                  </div>
+
+                  <div className="mt-4 grid gap-4">
+                    <div className="rounded-2xl border border-[#f3e2a0] bg-[#fff9e6] p-4">
+                      <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#8a6f16]">
+                        Detected Bible passage
+                      </div>
+                      <div className="mt-2 text-sm font-semibold text-[#2b124c]">
+                        Romans 3:23
+                      </div>
+                      <div className="mt-1 text-xs leading-6 text-slate-700">
+                        For all have sinned, and come short of the glory of God;
+                      </div>
+                    </div>
+
+                    <div className="rounded-2xl border border-slate-200 bg-[#2b124c] p-4 text-white">
+                      <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#f9e79f]">
+                        Presenter view
+                      </div>
+                      <div className="mt-3 text-lg font-semibold text-[#f9e79f]">
+                        Romans 3:23
+                      </div>
+                      <div className="mt-2 text-xs leading-6 text-slate-100">
+                        For all have sinned, and come short of the glory of God;
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -405,7 +450,7 @@ export default function VerseCastMarketingSite() {
         </section>
       </main>
 
-      {/* MINIMAL FOOTER — mockup-accurate */}
+      {/* FOOTER (you can adjust to match mockup if needed) */}
       <footer className="border-t border-slate-200 bg-white">
         <div className="mx-auto max-w-7xl px-6 py-8 text-center text-sm text-slate-500">
           © 2026 VerseCast
@@ -414,4 +459,3 @@ export default function VerseCastMarketingSite() {
     </div>
   );
 }
-``
