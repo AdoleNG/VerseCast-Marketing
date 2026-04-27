@@ -1,180 +1,45 @@
 import verseCastLogo from "./VerseCastLogo.png";
 
 export default function VerseCastMarketingSite() {
-  const heroCards = [
-    [
-      "AI-driven detection",
-      "VerseCast listens during live preaching and detects Bible passages mentioned naturally by the minister.",
-    ],
-    [
-      "Less mental strain",
-      "Reduces cognitive load for ministers and media teams during live services.",
-    ],
-    [
-      "Understands paraphrases",
-      "Even when the minister paraphrases a Bible passage, VerseCast can surface the exact Bible text for the media team to review.",
-    ],
-  ];
-
-  const benefitCards = [
-    [
-      "AI-driven assistance",
-      "VerseCast uses AI to detect Bible references and Bible passages in live preaching and help the church respond quickly during the sermon.",
-    ],
-    [
-      "Does not guess at random verses",
-      "The system is designed to surface the intended Bible passage instead of loosely guessing what the minister may have meant.",
-    ],
-    [
-      "Reduced cognitive load",
-      "Ministers and operators can stay focused on preaching, worship, and service flow instead of scrambling to find and confirm Bible passages manually.",
-    ],
-    [
-      "Better congregational engagement",
-      "When the right Bible passage appears clearly on screen, people can follow the message more easily and stay connected to the preaching.",
-    ],
-    [
-      "Real-time speed",
-      "VerseCast detects and surfaces Bible passages within seconds, helping media teams respond quickly during live preaching.",
-    ],
-    [
-      "Media team stays in control",
-      "Detected Bible passages appear on the control panel first so the media team can review, approve, and display them.",
-    ],
-    [
-      "Manual search in seconds",
-      "Media teams can instantly search and project any Bible passage from the control panel whenever needed.",
-    ],
-    [
-      "Support for real church workflows",
-      "VerseCast is built around live preaching, media teams, presenter screens, and the pace of real ministry environments.",
-    ],
-    [
-      "KJV-friendly preaching support",
-      "It is especially well suited to KJV-style language, quotations, and common Bible preaching patterns used in church settings.",
-    ],
-  ];
-
-  const workflowSteps = [
-    [
-      "1",
-      "The minister speaks naturally",
-      "VerseCast listens during live preaching and Bible teaching without requiring rigid commands or manual searching.",
-    ],
-    [
-      "2",
-      "VerseCast detects the Bible passage",
-      "Its AI-driven engine identifies spoken references, ranges, and even paraphrased Bible passages in real time.",
-    ],
-    [
-      "3",
-      "The control panel shows the result",
-      "If the minister paraphrased a verse, the media team confirms and authorizes the detected Bible passage to be displayed in one click.",
-    ],
-    [
-      "4",
-      "The Bible passage appears on screen",
-      "The congregation follows visually while the minister and media team stay focused on the message.",
-    ],
-  ];
-
-  const pricingPlans = [
-    [
-      "Starter",
-      "$19/mo",
-      [
-        "1 church account",
-        "1 live service session",
-        "Control panel + presenter",
-        "Email support",
-      ],
-    ],
-    [
-      "Pro",
-      "$49/mo",
-      ["Multiple service sessions", "Team access", "Service logs", "Priority support"],
-    ],
-    [
-      "Conference",
-      "$199/event",
-      [
-        "Event-based usage",
-        "Temporary setup support",
-        "Presenter and operator workflow",
-        "Ideal for conventions and crusades",
-      ],
-    ],
-  ];
-
-  const useCases = [
-    "Sunday worship services",
-    "Bible teaching and discipleship meetings",
-    "Campus and youth ministries",
-    "Conferences and revival programs",
-    "Livestream and hybrid church events",
-  ];
-
   return (
-    <div className="min-h-screen bg-white font-sans text-[#050816]">
-      {/* HEADER */}
-      <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
-        <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4 lg:px-10">
-          <div className="flex items-center gap-3">
-            <img
-              src={verseCastLogo}
-              alt="VerseCast Logo"
-              className="h-11 w-11 rounded-xl object-cover"
-            />
+    <div style={styles.page}>
+      <header style={styles.header}>
+        <div style={styles.headerInner}>
+          <div style={styles.brand}>
+            <img src={verseCastLogo} alt="VerseCast Logo" style={styles.logo} />
             <div>
-              <div className="text-lg font-extrabold tracking-tight text-[#050816]">
-                VerseCast
-              </div>
-              <div className="text-xs text-slate-500">
+              <div style={styles.brandTitle}>VerseCast</div>
+              <div style={styles.brandSubtitle}>
                 AI-driven Bible display for churches
               </div>
             </div>
           </div>
 
-          <nav className="hidden items-center gap-9 text-sm font-medium text-slate-600 md:flex">
-            <a href="#how-it-works" className="hover:text-[#2b124c]">
-              How it works
-            </a>
-            <a href="#benefits" className="hover:text-[#2b124c]">
-              Benefits
-            </a>
-            <a href="#pricing" className="hover:text-[#2b124c]">
-              Pricing
-            </a>
-            <a href="#contact" className="hover:text-[#2b124c]">
-              Contact
-            </a>
+          <nav style={styles.nav}>
+            <a href="#how-it-works" style={styles.navLink}>How it works</a>
+            <a href="#benefits" style={styles.navLink}>Benefits</a>
+            <a href="#pricing" style={styles.navLink}>Pricing</a>
+            <a href="#contact" style={styles.navLink}>Contact</a>
           </nav>
 
-          <a
-            href="#contact"
-            className="hidden rounded-xl bg-[#2b124c] px-5 py-2.5 text-sm font-bold text-white md:inline-flex"
-          >
-            Book a Demo
-          </a>
+          <a href="#contact" style={styles.demoButton}>Book a Demo</a>
         </div>
       </header>
 
       <main>
-        {/* HERO */}
-        <section className="bg-gradient-to-br from-white via-white to-[#fff8df] px-6 py-20 lg:px-10 lg:py-28">
-          <div className="mx-auto grid max-w-[1400px] grid-cols-1 items-center gap-14 lg:grid-cols-[1fr_0.95fr]">
-            {/* LEFT SIDE */}
-            <div className="max-w-[640px]">
-              <div className="inline-flex rounded-full border border-[#f0d77a] bg-[#fff5c7] px-4 py-1.5 text-sm font-medium text-[#6f5800]">
+        <section style={styles.hero}>
+          <div style={styles.heroInner}>
+            <div style={styles.heroLeft}>
+              <div style={styles.badge}>
                 Built for churches, conferences, and ministry teams
               </div>
 
-              <h1 className="mt-6 text-[44px] font-extrabold leading-[1.08] tracking-tight text-[#050816] sm:text-[56px] lg:text-[64px]">
+              <h1 style={styles.heroTitle}>
                 Help your congregation follow the sermon with Bible on screen in
                 real time.
               </h1>
 
-              <p className="mt-7 text-base leading-8 text-slate-700 sm:text-lg">
+              <p style={styles.heroText}>
                 VerseCast is an AI-powered Bible display platform designed to
                 help churches project Scripture seamlessly during live sermons.
                 As the minister speaks, VerseCast automatically recognizes
@@ -187,87 +52,64 @@ export default function VerseCastMarketingSite() {
                 right moment.
               </p>
 
-              <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-                <a
-                  href="#contact"
-                  className="rounded-2xl bg-[#2b124c] px-7 py-3.5 text-center text-base font-bold text-white"
-                >
-                  Book a Demo
-                </a>
-                <a
-                  href="#benefits"
-                  className="rounded-2xl border border-slate-300 bg-white px-7 py-3.5 text-center text-base font-bold text-slate-800"
-                >
+              <div style={styles.heroButtons}>
+                <a href="#contact" style={styles.primaryButton}>Book a Demo</a>
+                <a href="#benefits" style={styles.secondaryButton}>
                   See the Benefits
                 </a>
               </div>
 
-              <div className="mt-12 grid gap-5 sm:grid-cols-3">
-                {heroCards.map(([title, text]) => (
-                  <div
-                    key={title}
-                    className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
-                  >
-                    <h3 className="text-base font-extrabold leading-tight text-[#050816]">
-                      {title}
-                    </h3>
-                    <p className="mt-2 text-sm leading-6 text-slate-700">
-                      {text}
-                    </p>
-                  </div>
-                ))}
+              <div style={styles.heroCards}>
+                <Card
+                  title="AI-driven detection"
+                  text="VerseCast listens during live preaching and detects Bible passages mentioned naturally by the minister."
+                />
+                <Card
+                  title="Less mental strain"
+                  text="Reduces cognitive load for ministers and media teams during live services."
+                />
+                <Card
+                  title="Understands paraphrases"
+                  text="Even when the minister paraphrases a Bible passage, VerseCast can surface the exact Bible text for the media team to review."
+                />
               </div>
             </div>
 
-            {/* RIGHT SIDE MOCKUP */}
-            <div className="flex justify-center lg:justify-end">
-              <div className="w-full max-w-[560px] rounded-[30px] border border-slate-200 bg-white p-5 shadow-2xl shadow-slate-200/80">
-                <div className="rounded-[24px] border border-slate-200 bg-slate-50 p-5">
-                  <div className="mb-5 flex items-start justify-between gap-4">
+            <div style={styles.heroRight}>
+              <div style={styles.panelOuter}>
+                <div style={styles.panelInner}>
+                  <div style={styles.panelTop}>
                     <div>
-                      <div className="text-sm font-extrabold text-[#050816]">
-                        VerseCast Control Panel
-                      </div>
-                      <div className="mt-0.5 text-xs text-slate-500">
+                      <div style={styles.panelTitle}>VerseCast Control Panel</div>
+                      <div style={styles.panelSubtitle}>
                         Session: Sunday Morning Service
                       </div>
                     </div>
-
-                    <div className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700">
-                      Live
-                    </div>
+                    <div style={styles.liveBadge}>Live</div>
                   </div>
 
-                  <div className="rounded-2xl border border-slate-200 bg-white p-5">
-                    <div className="text-[10px] font-extrabold uppercase tracking-[0.32em] text-slate-500">
-                      Incoming sermon audio
-                    </div>
-                    <div className="mt-4 rounded-xl bg-slate-50 p-4 text-sm leading-6 text-slate-700">
+                  <div style={styles.audioBox}>
+                    <div style={styles.label}>Incoming sermon audio</div>
+                    <div style={styles.audioText}>
                       “Turn with me to Romans chapter 3 verse 23...”
                     </div>
                   </div>
 
-                  <div className="mt-5 grid gap-4 sm:grid-cols-2">
-                    <div className="rounded-2xl border border-[#efd476] bg-[#fff8df] p-5">
-                      <div className="text-[10px] font-extrabold uppercase tracking-[0.28em] text-[#7a6100]">
+                  <div style={styles.resultGrid}>
+                    <div style={styles.detectedBox}>
+                      <div style={styles.detectedLabel}>
                         Detected Bible Passage
                       </div>
-                      <div className="mt-4 text-lg font-extrabold text-[#050816]">
-                        Romans 3:23
-                      </div>
-                      <p className="mt-3 text-sm leading-6 text-slate-700">
+                      <div style={styles.verseRef}>Romans 3:23</div>
+                      <p style={styles.verseText}>
                         For all have sinned, and come short of the glory of God;
                       </p>
                     </div>
 
-                    <div className="rounded-2xl bg-[#2b124c] p-5 text-white">
-                      <div className="text-[10px] font-extrabold uppercase tracking-[0.28em] text-[#f9e79f]">
-                        Presenter View
-                      </div>
-                      <div className="mt-4 text-xl font-extrabold text-[#f9e79f]">
-                        Romans 3:23
-                      </div>
-                      <p className="mt-3 text-sm font-medium leading-6 text-white">
+                    <div style={styles.presenterBox}>
+                      <div style={styles.presenterLabel}>Presenter View</div>
+                      <div style={styles.presenterRef}>Romans 3:23</div>
+                      <p style={styles.presenterText}>
                         For all have sinned, and come short of the glory of God;
                       </p>
                     </div>
@@ -278,189 +120,368 @@ export default function VerseCastMarketingSite() {
           </div>
         </section>
 
-        {/* HOW IT WORKS */}
-        <section
-          id="how-it-works"
-          className="border-y border-slate-200 bg-slate-50 px-6 py-24 lg:px-10"
-        >
-          <div className="mx-auto max-w-[1400px]">
-            <div className="max-w-[820px]">
-              <div className="text-sm font-extrabold uppercase tracking-[0.35em] text-[#2b124c]">
-                How it works
-              </div>
-              <h2 className="mt-5 text-[36px] font-extrabold leading-tight text-[#050816] sm:text-[48px]">
-                A simple service workflow that supports preaching, teaching,
-                and worship.
-              </h2>
-            </div>
-
-            <div className="mt-14 grid gap-7 md:grid-cols-2 lg:grid-cols-4">
-              {workflowSteps.map(([num, title, text]) => (
-                <div
-                  key={num}
-                  className="rounded-[28px] border border-slate-200 bg-white p-7 shadow-sm"
-                >
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#2b124c] text-xl font-extrabold text-[#f9e79f]">
-                    {num}
-                  </div>
-                  <h3 className="mt-7 text-xl font-extrabold leading-snug text-[#050816]">
-                    {title}
-                  </h3>
-                  <p className="mt-5 text-base leading-8 text-slate-700">
-                    {text}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* BENEFITS */}
-        <section id="benefits" className="bg-white px-6 py-24 lg:px-10">
-          <div className="mx-auto max-w-[1400px]">
-            <div className="mx-auto max-w-[760px] text-center">
-              <div className="text-sm font-extrabold uppercase tracking-[0.35em] text-[#2b124c]">
-                Benefits
-              </div>
-              <h2 className="mt-5 text-[36px] font-extrabold leading-tight text-[#050816] sm:text-[48px]">
-                More ministry value, less technical distraction.
-              </h2>
-            </div>
-
-            <div className="mt-16 grid gap-7 md:grid-cols-2 lg:grid-cols-3">
-              {benefitCards.map(([title, text]) => (
-                <div
-                  key={title}
-                  className="rounded-[28px] border border-slate-200 bg-white p-7 shadow-sm"
-                >
-                  <div className="inline-flex rounded-full bg-[#f5ecff] px-4 py-1.5 text-xs font-extrabold uppercase tracking-[0.25em] text-[#2b124c]">
-                    Value
-                  </div>
-                  <h3 className="mt-7 text-xl font-extrabold text-[#050816]">
-                    {title}
-                  </h3>
-                  <p className="mt-5 text-base leading-8 text-slate-700">
-                    {text}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* PRICING */}
-        <section
-          id="pricing"
-          className="border-y border-slate-200 bg-slate-50 px-6 py-24 lg:px-10"
-        >
-          <div className="mx-auto max-w-[1400px]">
-            <div className="mx-auto max-w-[840px] text-center">
-              <div className="text-sm font-extrabold uppercase tracking-[0.35em] text-[#2b124c]">
-                Pricing
-              </div>
-              <h2 className="mt-5 text-[36px] font-extrabold leading-tight text-[#050816] sm:text-[48px]">
-                Simple plans for church adoption.
-              </h2>
-              <p className="mt-6 text-lg leading-8 text-slate-700">
-                Placeholder pricing for your marketing launch. You can adjust
-                these later when you finalize packaging.
-              </p>
-            </div>
-
-            <div className="mt-16 grid gap-7 lg:grid-cols-3">
-              {pricingPlans.map(([title, price, features]) => (
-                <div
-                  key={title}
-                  className="rounded-[28px] border border-slate-200 bg-white p-8 shadow-sm"
-                >
-                  <h3 className="text-xl font-extrabold text-[#050816]">
-                    {title}
-                  </h3>
-                  <div className="mt-6 text-4xl font-extrabold text-[#050816]">
-                    {price}
-                  </div>
-                  <ul className="mt-8 space-y-4 text-base text-slate-700">
-                    {features.map((feature) => (
-                      <li key={feature}>• {feature}</li>
-                    ))}
-                  </ul>
-                  <a
-                    href="#contact"
-                    className="mt-10 inline-flex rounded-2xl bg-[#2b124c] px-6 py-3.5 text-base font-bold text-white"
-                  >
-                    Talk to Sales
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* WHO IT'S FOR */}
-        <section className="bg-[#2b124c] px-6 py-24 text-white lg:px-10">
-          <div className="mx-auto grid max-w-[1400px] gap-16 lg:grid-cols-[1fr_0.9fr] lg:items-center">
-            <div>
-              <div className="text-sm font-extrabold uppercase tracking-[0.35em] text-[#f9e79f]">
-                Who it’s for
-              </div>
-              <h2 className="mt-6 text-[36px] font-extrabold leading-tight sm:text-[48px]">
-                Churches, conferences, and ministry teams that want Bible on
-                screen without delay.
-              </h2>
-              <p className="mt-8 max-w-[820px] text-lg leading-9 text-slate-100">
-                VerseCast is a strong fit for churches that value live teaching
-                clarity, smoother media workflows, and a more connected
-                congregational experience.
-              </p>
-            </div>
-
-            <div className="grid gap-5">
-              {useCases.map((item) => (
-                <div
-                  key={item}
-                  className="rounded-2xl border border-white/15 bg-white/10 px-7 py-5 text-base font-bold"
-                >
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CONTACT */}
-        <section id="contact" className="bg-white px-6 py-24 lg:px-10">
-          <div className="mx-auto max-w-[1200px] rounded-[36px] border border-slate-200 bg-slate-50 p-8 shadow-sm sm:p-14">
-            <div className="text-sm font-extrabold uppercase tracking-[0.35em] text-[#2b124c]">
-              Get started
-            </div>
-            <h2 className="mt-6 text-[36px] font-extrabold leading-tight text-[#050816] sm:text-[52px]">
-              Launch VerseCast for your church.
+        <section id="how-it-works" style={styles.sectionGray}>
+          <div style={styles.sectionInner}>
+            <div style={styles.sectionLabel}>How it works</div>
+            <h2 style={styles.sectionTitle}>
+              A simple service workflow that supports preaching, teaching, and
+              worship.
             </h2>
-            <p className="mt-6 max-w-[900px] text-lg leading-8 text-slate-700">
-              Request a live demo, join the early access list, or start
-              conversations about using VerseCast in your ministry.
-            </p>
-
-            <div className="mt-12">
-              <iframe
-                src="https://tally.so/embed/0QMkX6?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                width="100%"
-                height="520"
-                frameBorder="0"
-                marginHeight="0"
-                marginWidth="0"
-                title="VerseCast Waitlist"
-              />
-            </div>
           </div>
         </section>
       </main>
-
-      <footer className="border-t border-slate-200 bg-white">
-        <div className="mx-auto max-w-[1400px] px-6 py-9 text-center text-sm text-slate-500 lg:px-10">
-          © 2026 VerseCast
-        </div>
-      </footer>
     </div>
   );
 }
+
+function Card({ title, text }) {
+  return (
+    <div style={styles.card}>
+      <h3 style={styles.cardTitle}>{title}</h3>
+      <p style={styles.cardText}>{text}</p>
+    </div>
+  );
+}
+
+const styles = {
+  page: {
+    minHeight: "100vh",
+    background: "#ffffff",
+    color: "#050816",
+    fontFamily:
+      'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+  },
+
+  header: {
+    position: "sticky",
+    top: 0,
+    zIndex: 50,
+    background: "rgba(255,255,255,0.96)",
+    borderBottom: "1px solid #e5e7eb",
+  },
+
+  headerInner: {
+    maxWidth: 1400,
+    margin: "0 auto",
+    padding: "18px 40px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+
+  brand: {
+    display: "flex",
+    alignItems: "center",
+    gap: 12,
+  },
+
+  logo: {
+    width: 42,
+    height: 42,
+    borderRadius: 10,
+    objectFit: "cover",
+    flexShrink: 0,
+  },
+
+  brandTitle: {
+    fontSize: 18,
+    fontWeight: 800,
+    lineHeight: 1.1,
+  },
+
+  brandSubtitle: {
+    fontSize: 12,
+    color: "#64748b",
+    marginTop: 2,
+  },
+
+  nav: {
+    display: "flex",
+    alignItems: "center",
+    gap: 34,
+  },
+
+  navLink: {
+    fontSize: 14,
+    color: "#475569",
+    textDecoration: "none",
+    fontWeight: 500,
+  },
+
+  demoButton: {
+    background: "#2b124c",
+    color: "#ffffff",
+    textDecoration: "none",
+    padding: "11px 20px",
+    borderRadius: 12,
+    fontSize: 14,
+    fontWeight: 700,
+  },
+
+  hero: {
+    background: "linear-gradient(135deg, #ffffff 0%, #ffffff 55%, #fff8df 100%)",
+    padding: "96px 40px",
+  },
+
+  heroInner: {
+    maxWidth: 1400,
+    margin: "0 auto",
+    display: "grid",
+    gridTemplateColumns: "1fr 0.9fr",
+    gap: 70,
+    alignItems: "center",
+  },
+
+  heroLeft: {
+    maxWidth: 650,
+  },
+
+  badge: {
+    display: "inline-flex",
+    background: "#fff5c7",
+    border: "1px solid #f0d77a",
+    color: "#6f5800",
+    borderRadius: 999,
+    padding: "6px 14px",
+    fontSize: 13,
+    fontWeight: 500,
+  },
+
+  heroTitle: {
+    margin: "26px 0 0",
+    fontSize: 58,
+    lineHeight: 1.07,
+    letterSpacing: "-0.045em",
+    fontWeight: 900,
+    color: "#050816",
+  },
+
+  heroText: {
+    marginTop: 28,
+    fontSize: 17,
+    lineHeight: 1.8,
+    color: "#334155",
+  },
+
+  heroButtons: {
+    marginTop: 34,
+    display: "flex",
+    gap: 14,
+  },
+
+  primaryButton: {
+    background: "#2b124c",
+    color: "#ffffff",
+    textDecoration: "none",
+    padding: "14px 26px",
+    borderRadius: 16,
+    fontWeight: 800,
+  },
+
+  secondaryButton: {
+    background: "#ffffff",
+    color: "#1e293b",
+    textDecoration: "none",
+    padding: "14px 26px",
+    borderRadius: 16,
+    fontWeight: 800,
+    border: "1px solid #cbd5e1",
+  },
+
+  heroCards: {
+    marginTop: 46,
+    display: "grid",
+    gridTemplateColumns: "repeat(3, 1fr)",
+    gap: 18,
+  },
+
+  card: {
+    background: "#ffffff",
+    border: "1px solid #e5e7eb",
+    borderRadius: 18,
+    padding: 18,
+    boxShadow: "0 8px 20px rgba(15,23,42,0.04)",
+  },
+
+  cardTitle: {
+    margin: 0,
+    fontSize: 15,
+    lineHeight: 1.25,
+    fontWeight: 850,
+  },
+
+  cardText: {
+    margin: "9px 0 0",
+    fontSize: 13,
+    lineHeight: 1.55,
+    color: "#475569",
+  },
+
+  heroRight: {
+    display: "flex",
+    justifyContent: "flex-end",
+    alignItems: "center",
+  },
+
+  panelOuter: {
+    width: "100%",
+    maxWidth: 560,
+    background: "#ffffff",
+    border: "1px solid #e5e7eb",
+    borderRadius: 32,
+    padding: 18,
+    boxShadow: "0 28px 70px rgba(15,23,42,0.13)",
+  },
+
+  panelInner: {
+    background: "#f8fafc",
+    border: "1px solid #e5e7eb",
+    borderRadius: 26,
+    padding: 20,
+  },
+
+  panelTop: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "flex-start",
+    marginBottom: 20,
+  },
+
+  panelTitle: {
+    fontSize: 14,
+    fontWeight: 850,
+  },
+
+  panelSubtitle: {
+    fontSize: 12,
+    color: "#64748b",
+    marginTop: 3,
+  },
+
+  liveBadge: {
+    background: "#ecfdf5",
+    color: "#047857",
+    borderRadius: 999,
+    padding: "6px 12px",
+    fontSize: 12,
+    fontWeight: 800,
+  },
+
+  audioBox: {
+    background: "#ffffff",
+    border: "1px solid #e5e7eb",
+    borderRadius: 20,
+    padding: 18,
+  },
+
+  label: {
+    textTransform: "uppercase",
+    letterSpacing: "0.28em",
+    color: "#64748b",
+    fontSize: 10,
+    fontWeight: 900,
+  },
+
+  audioText: {
+    marginTop: 14,
+    background: "#f8fafc",
+    borderRadius: 14,
+    padding: 16,
+    color: "#475569",
+    fontSize: 14,
+    lineHeight: 1.6,
+  },
+
+  resultGrid: {
+    marginTop: 18,
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
+    gap: 16,
+  },
+
+  detectedBox: {
+    background: "#fff8df",
+    border: "1px solid #efd476",
+    borderRadius: 20,
+    padding: 18,
+  },
+
+  detectedLabel: {
+    textTransform: "uppercase",
+    letterSpacing: "0.24em",
+    color: "#7a6100",
+    fontSize: 10,
+    fontWeight: 900,
+  },
+
+  verseRef: {
+    marginTop: 16,
+    fontSize: 19,
+    fontWeight: 900,
+  },
+
+  verseText: {
+    marginTop: 12,
+    fontSize: 14,
+    lineHeight: 1.6,
+    color: "#475569",
+  },
+
+  presenterBox: {
+    background: "#2b124c",
+    borderRadius: 20,
+    padding: 18,
+    color: "#ffffff",
+  },
+
+  presenterLabel: {
+    textTransform: "uppercase",
+    letterSpacing: "0.24em",
+    color: "#f9e79f",
+    fontSize: 10,
+    fontWeight: 900,
+  },
+
+  presenterRef: {
+    marginTop: 16,
+    fontSize: 21,
+    fontWeight: 900,
+    color: "#f9e79f",
+  },
+
+  presenterText: {
+    marginTop: 12,
+    fontSize: 14,
+    lineHeight: 1.6,
+    color: "#ffffff",
+  },
+
+  sectionGray: {
+    background: "#f8fafc",
+    borderTop: "1px solid #e5e7eb",
+    borderBottom: "1px solid #e5e7eb",
+    padding: "90px 40px",
+  },
+
+  sectionInner: {
+    maxWidth: 1400,
+    margin: "0 auto",
+  },
+
+  sectionLabel: {
+    textTransform: "uppercase",
+    letterSpacing: "0.35em",
+    color: "#2b124c",
+    fontSize: 13,
+    fontWeight: 900,
+  },
+
+  sectionTitle: {
+    maxWidth: 850,
+    marginTop: 20,
+    fontSize: 46,
+    lineHeight: 1.15,
+    letterSpacing: "-0.035em",
+    fontWeight: 900,
+  },
+};
