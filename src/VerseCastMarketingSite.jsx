@@ -71,58 +71,56 @@ export default function VerseCastMarketingSite() {
 
   return (
     <div className="page">
-      <header className="header">
-        <div className="headerInner">
-          <div className="brand">
-            <img src={verseCastLogo} alt="VerseCast Logo" className="logo" />
-            <div>
-              <div className="brandTitle">VerseCast</div>
-              <div className="brandSubtitle">AI-driven Bible display for churches</div>
-            </div>
-          </div>
+<header className="header">
+  <div className="headerInner">
+    <div className="brand">
+      <img src={verseCastLogo} alt="VerseCast Logo" className="logo" />
+      <div>
+        <div className="brandTitle">VerseCast</div>
+        <div className="brandSubtitle">AI-driven Bible display for churches</div>
+      </div>
+    </div>
 
-          {/* Desktop Navigation */}
-          
-          <nav className={`nav ${menuOpen ? "open" : ""}`}>
-            <a href="#how-it-works" className="navLink">How it works</a>
-            <a href="#benefits" className="navLink">Benefits</a>
-            <a href="#pricing" className="navLink">Pricing</a>
-            <a href="#contact" className="navLink">Contact</a>
-            
-            {/* Mobile-only Start Here (inside dropdown) */}
-            <a
-              href="https://app.versecast.ca/login"
-              className="navLink"
-              style={{ fontWeight: 800, color: "#4f46e5" }}
-              >
-                Start Here
-            </a>
+    {/* Desktop Navigation */}
+    <nav className={`nav ${menuOpen ? "open" : ""}`}>
+      <a href="#how-it-works" className="navLink">How it works</a>
+      <a href="#benefits" className="navLink">Benefits</a>
+      <a href="#pricing" className="navLink">Pricing</a>
+      <a href="#contact" className="navLink">Contact</a>
 
-          </nav>
+      {/* Mobile-only Start Here (inside dropdown) */}
+      <a
+        href="https://app.versecast.ca/login"
+        className="navLink startLink"
+        style={{ fontWeight: 800, color: "#4f46e5" }}
+      >
+        Start Here
+      </a>
+    </nav>
 
-          {/* Desktop Buttons */}
+    {/* Desktop Buttons */}
+    <div className="headerActions">
+      <a href="#contact" className="demoButton">Book a Demo</a>
 
-          <div className="headerActions">
-            <a href="#contact" className="demoButton">Book a Demo</a>
+      <a
+        href="https://app.versecast.ca/login"
+        className="demoButton"
+        style={{ background: "#4f46e5" }}
+      >
+        Start Here
+      </a>
 
-            <a
-              href="https://app.versecast.ca/login"
-              className="demoButton"
-              style={{ background: "#4f46e5" }}
-            >
-              Start Here
-            </a>
+      <button
+        className="menuButton"
+        aria-label="Toggle menu"
+        onClick={() => setMenuOpen((s) => !s)}
+      >
+        <span className="hamburger" />
+      </button>
+    </div>
+  </div>
+</header>
 
-            <button
-              className="menuButton"
-              aria-label="Toggle menu"
-              onClick={() => setMenuOpen((s) => !s)}
-            >
-              <span className="hamburger" />
-            </button>
-          </div>
-        </div>
-      </header>
 
       <main>
         <section className="hero">

@@ -250,3 +250,21 @@ body{
     display: none;
   }
 }
+/* Hide the nav Start Here by default (desktop) */
+.nav .startLink {
+  display: none;
+}
+
+/* Mobile: show nav Start Here and hide the desktop Start Here button */
+@media (max-width: 768px) {
+  .nav .startLink {
+    display: block;
+    font-weight: 800;
+    color: #4f46e5;
+  }
+
+  /* Hide the second .demoButton (Start Here) in headerActions on mobile */
+  .headerActions a.demoButton:nth-of-type(2) {
+    display: none;
+  }
+}
