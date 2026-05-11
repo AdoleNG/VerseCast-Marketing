@@ -89,8 +89,16 @@ export default function VerseCastMarketingSite() {
           </nav>
 
           <div className="headerActions">
-            <a href="#contact" className="demoButton">Book a Demo1</a>
-            <a href="#contact" className="primaryButton">Start Here</a>
+            <a href="#contact" className="demoButton">Book a Demo</a>
+
+            <a
+              href="https://app.versecast.ca/login"
+              className="demoButton"
+              style={{ background: "#4f46e5" }}
+            >
+              Start Here
+            </a>
+            
             <button
               className="menuButton"
               aria-label="Toggle menu"
