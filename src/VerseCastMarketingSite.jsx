@@ -81,12 +81,26 @@ export default function VerseCastMarketingSite() {
             </div>
           </div>
 
+          {/* Desktop Navigation */}
+          
           <nav className={`nav ${menuOpen ? "open" : ""}`}>
             <a href="#how-it-works" className="navLink">How it works</a>
             <a href="#benefits" className="navLink">Benefits</a>
             <a href="#pricing" className="navLink">Pricing</a>
             <a href="#contact" className="navLink">Contact</a>
+            
+            {/* Mobile-only Start Here (inside dropdown) */}
+            <a
+              href="https://app.versecast.ca/login"
+              className="navLink"
+              style={{ fontWeight: 800, color: "#4f46e5" }}
+              >
+                Start Here
+            </a>
+
           </nav>
+
+          {/* Desktop Buttons */}
 
           <div className="headerActions">
             <a href="#contact" className="demoButton">Book a Demo</a>
@@ -98,7 +112,7 @@ export default function VerseCastMarketingSite() {
             >
               Start Here
             </a>
-            
+
             <button
               className="menuButton"
               aria-label="Toggle menu"
