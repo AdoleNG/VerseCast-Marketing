@@ -89,7 +89,8 @@ export default function VerseCastMarketingSite() {
           </nav>
 
           <div className="headerActions">
-            <a href="#contact" className="demoButton">Book a Demo</a>
+            <a href="#contact" className="demoButton">Book a Demo1</a>
+            <a href="#contact" className="primaryButton">Start Here</a>
             <button
               className="menuButton"
               aria-label="Toggle menu"
@@ -120,8 +121,7 @@ export default function VerseCastMarketingSite() {
               </p>
 
               <div className="heroButtons">
-                <a href="#contact" className="primaryButton">Book a Demo1</a>
-                <a href="#contact" className="primaryButton">Start Here</a>
+                <a href="#contact" className="primaryButton">Book a Demo</a>
                 <a href="#benefits" className="secondaryButton">See the Benefits</a>
               </div>
 
