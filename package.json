@@ -11,7 +11,7 @@
   "autoprefixer": "^10.4.27",
   "postcss": "^8.5.8",
   "tailwindcss": "^4.2.2"
-}
+},
 "scripts": {
   "postinstall": "chmod +x node_modules/.bin/vite",
   "dev": "vite",
