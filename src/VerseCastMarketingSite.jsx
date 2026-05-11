@@ -1,6 +1,10 @@
+import React, { useState } from "react";
+import "./styles.css";
 import verseCastLogo from "./VerseCastLogo.png";
 
 export default function VerseCastMarketingSite() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const heroCards = [
     [
       "AI-driven detection",
@@ -66,39 +70,48 @@ export default function VerseCastMarketingSite() {
   ];
 
   return (
-    <div style={styles.page}>
-      <header style={styles.header}>
-        <div style={styles.headerInner}>
-          <div style={styles.brand}>
-            <img src={verseCastLogo} alt="VerseCast Logo" style={styles.logo} />
+    <div className="page">
+      <header className="header">
+        <div className="headerInner">
+          <div className="brand">
+            <img src={verseCastLogo} alt="VerseCast Logo" className="logo" />
             <div>
-              <div style={styles.brandTitle}>VerseCast</div>
-              <div style={styles.brandSubtitle}>AI-driven Bible display for churches</div>
+              <div className="brandTitle">VerseCast</div>
+              <div className="brandSubtitle">AI-driven Bible display for churches</div>
             </div>
           </div>
 
-          <nav style={styles.nav}>
-            <a href="#how-it-works" style={styles.navLink}>How it works</a>
-            <a href="#benefits" style={styles.navLink}>Benefits</a>
-            <a href="#pricing" style={styles.navLink}>Pricing</a>
-            <a href="#contact" style={styles.navLink}>Contact</a>
+          <nav className={`nav ${menuOpen ? "open" : ""}`}>
+            <a href="#how-it-works" className="navLink">How it works</a>
+            <a href="#benefits" className="navLink">Benefits</a>
+            <a href="#pricing" className="navLink">Pricing</a>
+            <a href="#contact" className="navLink">Contact</a>
           </nav>
 
-          <a href="#contact" style={styles.demoButton}>Book a Demo</a>
+          <div className="headerActions">
+            <a href="#contact" className="demoButton">Book a Demo</a>
+            <button
+              className="menuButton"
+              aria-label="Toggle menu"
+              onClick={() => setMenuOpen((s) => !s)}
+            >
+              <span className="hamburger" />
+            </button>
+          </div>
         </div>
       </header>
 
       <main>
-        <section style={styles.hero}>
-          <div style={styles.heroInner}>
-            <div style={styles.heroLeft}>
-              <div style={styles.badge}>Built for churches, conferences, and ministry teams</div>
+        <section className="hero">
+          <div className="heroInner">
+            <div className="heroLeft">
+              <div className="badge">Built for churches, conferences, and ministry teams</div>
 
-              <h1 style={styles.heroTitle}>
+              <h1 className="heroTitle">
                 Help your congregation follow the sermon with Bible on screen in real time.
               </h1>
 
-              <p style={styles.heroText}>
+              <p className="heroText">
                 VerseCast is an AI-powered Bible display platform designed to help churches project Scripture seamlessly during live sermons.
                 As the minister speaks, VerseCast automatically recognizes explicit Bible references and displays them on screen without any
                 manual input. When a speaker paraphrases a passage, VerseCast intelligently surfaces the matching Bible passage on the Control
@@ -106,506 +119,175 @@ export default function VerseCastMarketingSite() {
                 congregation always sees the right verse at the right moment.
               </p>
 
-              <div style={styles.heroButtons}>
-                <a href="#contact" style={styles.primaryButton}>Book a Demo</a>
-                <a href="#benefits" style={styles.secondaryButton}>See the Benefits</a>
+              <div className="heroButtons">
+                <a href="#contact" className="primaryButton">Book a Demo</a>
+                <a href="#benefits" className="secondaryButton">See the Benefits</a>
               </div>
 
-              <div style={styles.heroCards}>
+              <div className="heroCards">
                 {heroCards.map(([title, text]) => (
                   <Card key={title} title={title} text={text} />
                 ))}
               </div>
             </div>
 
-            <div style={styles.heroRight}>
+            <div className="heroRight">
               <ControlPanel />
             </div>
           </div>
         </section>
 
-        <section id="how-it-works" style={styles.sectionGray}>
-          <div style={styles.sectionInner}>
-            <div style={styles.sectionLabel}>How it works</div>
-            <h2 style={styles.sectionTitle}>
+        <section id="how-it-works" className="sectionGray">
+          <div className="sectionInner">
+            <div className="sectionLabel">How it works</div>
+            <h2 className="sectionTitle">
               A simple service workflow that supports preaching, teaching, and worship.
             </h2>
 
-            <div style={styles.fourGrid}>
+            <div className="fourGrid">
               {workflowSteps.map(([num, title, text]) => (
-                <div key={num} style={styles.workflowCard}>
-                  <div style={styles.stepNumber}>{num}</div>
-                  <h3 style={styles.workflowTitle}>{title}</h3>
-                  <p style={styles.workflowText}>{text}</p>
+                <div key={num} className="workflowCard">
+                  <div className="stepNumber">{num}</div>
+                  <h3 className="workflowTitle">{title}</h3>
+                  <p className="workflowText">{text}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section id="benefits" style={styles.sectionWhite}>
-          <div style={styles.sectionInner}>
-            <div style={styles.centerText}>
-              <div style={styles.sectionLabel}>Benefits</div>
-              <h2 style={styles.sectionTitleCenter}>More ministry value, less technical distraction.</h2>
+        <section id="benefits" className="sectionWhite">
+          <div className="sectionInner">
+            <div className="centerText">
+              <div className="sectionLabel">Benefits</div>
+              <h2 className="sectionTitleCenter">More ministry value, less technical distraction.</h2>
             </div>
 
-            <div style={styles.threeGrid}>
+            <div className="threeGrid">
               {benefitCards.map(([title, text]) => (
-                <div key={title} style={styles.benefitCard}>
-                  <div style={styles.valueBadge}>Value</div>
-                  <h3 style={styles.cardTitle}>{title}</h3>
-                  <p style={styles.cardText}>{text}</p>
+                <div key={title} className="benefitCard">
+                  <div className="valueBadge">Value</div>
+                  <h3 className="cardTitle">{title}</h3>
+                  <p className="cardText">{text}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section id="pricing" style={styles.sectionGray}>
-          <div style={styles.sectionInner}>
-            <div style={styles.centerText}>
-              <div style={styles.sectionLabel}>Pricing</div>
-              <h2 style={styles.sectionTitleCenter}>Simple plans for church adoption.</h2>
-              <p style={styles.sectionIntro}>
+        <section id="pricing" className="sectionGray">
+          <div className="sectionInner">
+            <div className="centerText">
+              <div className="sectionLabel">Pricing</div>
+              <h2 className="sectionTitleCenter">Simple plans for church adoption.</h2>
+              <p className="sectionIntro">
                 Placeholder pricing for your marketing launch. You can adjust these later when you finalize packaging.
               </p>
             </div>
 
-            <div style={styles.threeGrid}>
+            <div className="threeGrid">
               {pricingPlans.map(([title, price, features]) => (
-                <div key={title} style={styles.pricingCard}>
-                  <h3 style={styles.pricingTitle}>{title}</h3>
-                  <div style={styles.price}>{price}</div>
-                  <ul style={styles.featureList}>
+                <div key={title} className="pricingCard">
+                  <h3 className="pricingTitle">{title}</h3>
+                  <div className="price">{price}</div>
+                  <ul className="featureList">
                     {features.map((feature) => (
                       <li key={feature}>• {feature}</li>
                     ))}
                   </ul>
-                  <a href="#contact" style={styles.salesButton}>Talk to Sales</a>
+                  <a href="#contact" className="salesButton">Talk to Sales</a>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section style={styles.whoSection}>
-          <div style={styles.whoInner}>
+        <section className="whoSection">
+          <div className="whoInner">
             <div>
-              <div style={styles.goldLabel}>Who it’s for</div>
-              <h2 style={styles.whoTitle}>
+              <div className="goldLabel">Who it’s for</div>
+              <h2 className="whoTitle">
                 Churches, conferences, and ministry teams that want Bible on screen without delay.
               </h2>
-              <p style={styles.whoText}>
+              <p className="whoText">
                 VerseCast is a strong fit for churches that value live teaching clarity, smoother media workflows,
                 and a more connected congregational experience.
               </p>
             </div>
 
-            <div style={styles.useCaseList}>
+            <div className="useCaseList">
               {useCases.map((item) => (
-                <div key={item} style={styles.useCase}>{item}</div>
+                <div key={item} className="useCase">{item}</div>
               ))}
             </div>
           </div>
         </section>
 
-        <section id="contact" style={styles.contactSection}>
-          <div style={styles.contactCard}>
-            <div style={styles.sectionLabel}>Get started</div>
-            <h2 style={styles.contactTitle}>Launch VerseCast for your church.</h2>
-            <p style={styles.contactText}>
+        <section id="contact" className="contactSection">
+          <div className="contactCard">
+            <div className="sectionLabel">Get started</div>
+            <h2 className="contactTitle">Launch VerseCast for your church.</h2>
+            <p className="contactText">
               Request a live demo, join the early access list, or start conversations about using VerseCast in your ministry.
             </p>
 
-            <iframe
-              src="https://tally.so/embed/0QMkX6?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-              width="100%"
-              height="520"
-              frameBorder="0"
-              marginHeight="0"
-              marginWidth="0"
-              title="VerseCast Waitlist"
-              style={{ marginTop: 40 }}
-            />
+            <div className="iframeWrap">
+              <iframe
+                src="https://tally.so/embed/0QMkX6?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                title="VerseCast Waitlist"
+                frameBorder="0"
+                loading="lazy"
+              />
+            </div>
           </div>
         </section>
       </main>
 
-      <footer style={styles.footer}>© 2026 VerseCast</footer>
+      <footer className="footer">© 2026 VerseCast</footer>
     </div>
   );
 }
 
 function Card({ title, text }) {
   return (
-    <div style={styles.card}>
-      <h3 style={styles.cardTitle}>{title}</h3>
-      <p style={styles.cardText}>{text}</p>
+    <div className="card">
+      <h3 className="cardTitle">{title}</h3>
+      <p className="cardText">{text}</p>
     </div>
   );
 }
 
 function ControlPanel() {
   return (
-    <div style={styles.panelOuter}>
-      <div style={styles.panelInner}>
-        <div style={styles.panelTop}>
+    <div className="panelOuter">
+      <div className="panelInner">
+        <div className="panelTop">
           <div>
-            <div style={styles.panelTitle}>VerseCast Control Panel</div>
-            <div style={styles.panelSubtitle}>Session: Sunday Morning Service</div>
+            <div className="panelTitle">VerseCast Control Panel</div>
+            <div className="panelSubtitle">Session: Sunday Morning Service</div>
           </div>
-          <div style={styles.liveBadge}>Live</div>
+          <div className="liveBadge">Live</div>
         </div>
 
-        <div style={styles.audioBox}>
-          <div style={styles.label}>Incoming sermon audio</div>
-          <div style={styles.audioText}>“Turn with me to Romans chapter 3 verse 23...”</div>
+        <div className="audioBox">
+          <div className="label">Incoming sermon audio</div>
+          <div className="audioText">“Turn with me to Romans chapter 3 verse 23...”</div>
         </div>
 
-        <div style={styles.resultGrid}>
-          <div style={styles.detectedBox}>
-            <div style={styles.detectedLabel}>Detected Bible Passage</div>
-            <div style={styles.verseRef}>Romans 3:23</div>
-            <p style={styles.verseText}>For all have sinned, and come short of the glory of God;</p>
+        <div className="resultGrid">
+          <div className="detectedBox">
+            <div className="detectedLabel">Detected Bible Passage</div>
+            <div className="verseRef">Romans 3:23</div>
+            <p className="verseText">For all have sinned, and come short of the glory of God;</p>
           </div>
 
-          <div style={styles.presenterBox}>
-            <div style={styles.presenterLabel}>Presenter View</div>
-            <div style={styles.presenterRef}>Romans 3:23</div>
-            <p style={styles.presenterText}>For all have sinned, and come short of the glory of God;</p>
+          <div className="presenterBox">
+            <div className="presenterLabel">Presenter View</div>
+            <div className="presenterRef">Romans 3:23</div>
+            <p className="presenterText">For all have sinned, and come short of the glory of God;</p>
           </div>
         </div>
       </div>
     </div>
   );
 }
-
-const styles = {
-  page: {
-    minHeight: "100vh",
-    background: "#ffffff",
-    color: "#050816",
-    fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
-  },
-  header: {
-    position: "sticky",
-    top: 0,
-    zIndex: 50,
-    background: "rgba(255,255,255,0.96)",
-    borderBottom: "1px solid #e5e7eb",
-  },
-  headerInner: {
-    maxWidth: 1400,
-    margin: "0 auto",
-    padding: "18px 40px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-  },
-  brand: { display: "flex", alignItems: "center", gap: 12 },
-  logo: { width: 42, height: 42, borderRadius: 10, objectFit: "cover", flexShrink: 0 },
-  brandTitle: { fontSize: 18, fontWeight: 800 },
-  brandSubtitle: { fontSize: 12, color: "#64748b" },
-  nav: { display: "flex", gap: 34 },
-  navLink: { fontSize: 14, color: "#475569", textDecoration: "none", fontWeight: 600 },
-  demoButton: {
-    background: "#2b124c",
-    color: "#fff",
-    textDecoration: "none",
-    padding: "11px 20px",
-    borderRadius: 12,
-    fontSize: 14,
-    fontWeight: 800,
-  },
-
-  hero: {
-    background: "linear-gradient(135deg, #ffffff 0%, #ffffff 55%, #fff8df 100%)",
-    padding: "96px 40px",
-  },
-  heroInner: {
-    maxWidth: 1400,
-    margin: "0 auto",
-    display: "grid",
-    gridTemplateColumns: "1fr 0.9fr",
-    gap: 70,
-    alignItems: "center",
-  },
-  heroLeft: { maxWidth: 650 },
-  badge: {
-    display: "inline-flex",
-    background: "#fff5c7",
-    border: "1px solid #f0d77a",
-    color: "#6f5800",
-    borderRadius: 999,
-    padding: "6px 14px",
-    fontSize: 13,
-    fontWeight: 600,
-  },
-  heroTitle: {
-    margin: "26px 0 0",
-    fontSize: 58,
-    lineHeight: 1.07,
-    letterSpacing: "-0.045em",
-    fontWeight: 900,
-  },
-  heroText: {
-    marginTop: 28,
-    fontSize: 17,
-    lineHeight: 1.8,
-    color: "#334155",
-  },
-  heroButtons: { marginTop: 34, display: "flex", gap: 14 },
-  primaryButton: {
-    background: "#2b124c",
-    color: "#fff",
-    textDecoration: "none",
-    padding: "14px 26px",
-    borderRadius: 16,
-    fontWeight: 800,
-  },
-  secondaryButton: {
-    background: "#fff",
-    color: "#1e293b",
-    textDecoration: "none",
-    padding: "14px 26px",
-    borderRadius: 16,
-    fontWeight: 800,
-    border: "1px solid #cbd5e1",
-  },
-  heroCards: {
-    marginTop: 46,
-    display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
-    gap: 18,
-  },
-  heroRight: { display: "flex", justifyContent: "flex-end" },
-
-  card: {
-    background: "#fff",
-    border: "1px solid #e5e7eb",
-    borderRadius: 18,
-    padding: 18,
-    boxShadow: "0 8px 20px rgba(15,23,42,0.04)",
-  },
-  cardTitle: { margin: 0, fontSize: 16, fontWeight: 850 },
-  cardText: { margin: "10px 0 0", fontSize: 14, lineHeight: 1.6, color: "#475569" },
-
-  panelOuter: {
-    width: "100%",
-    maxWidth: 560,
-    background: "#fff",
-    border: "1px solid #e5e7eb",
-    borderRadius: 32,
-    padding: 18,
-    boxShadow: "0 28px 70px rgba(15,23,42,0.13)",
-  },
-  panelInner: {
-    background: "#f8fafc",
-    border: "1px solid #e5e7eb",
-    borderRadius: 26,
-    padding: 20,
-  },
-  panelTop: { display: "flex", justifyContent: "space-between", marginBottom: 20 },
-  panelTitle: { fontSize: 14, fontWeight: 850 },
-  panelSubtitle: { fontSize: 12, color: "#64748b", marginTop: 3 },
-  liveBadge: {
-    background: "#ecfdf5",
-    color: "#047857",
-    borderRadius: 999,
-    padding: "6px 12px",
-    fontSize: 12,
-    fontWeight: 800,
-  },
-  audioBox: {
-    background: "#fff",
-    border: "1px solid #e5e7eb",
-    borderRadius: 20,
-    padding: 18,
-  },
-  label: {
-    textTransform: "uppercase",
-    letterSpacing: "0.28em",
-    color: "#64748b",
-    fontSize: 10,
-    fontWeight: 900,
-  },
-  audioText: {
-    marginTop: 14,
-    background: "#f8fafc",
-    borderRadius: 14,
-    padding: 16,
-    color: "#475569",
-    fontSize: 14,
-  },
-  resultGrid: { marginTop: 18, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 },
-  detectedBox: {
-    background: "#fff8df",
-    border: "1px solid #efd476",
-    borderRadius: 20,
-    padding: 18,
-  },
-  detectedLabel: {
-    textTransform: "uppercase",
-    letterSpacing: "0.24em",
-    color: "#7a6100",
-    fontSize: 10,
-    fontWeight: 900,
-  },
-  verseRef: { marginTop: 16, fontSize: 19, fontWeight: 900 },
-  verseText: { marginTop: 12, fontSize: 14, lineHeight: 1.6, color: "#475569" },
-  presenterBox: { background: "#2b124c", borderRadius: 20, padding: 18, color: "#fff" },
-  presenterLabel: {
-    textTransform: "uppercase",
-    letterSpacing: "0.24em",
-    color: "#f9e79f",
-    fontSize: 10,
-    fontWeight: 900,
-  },
-  presenterRef: { marginTop: 16, fontSize: 21, fontWeight: 900, color: "#f9e79f" },
-  presenterText: { marginTop: 12, fontSize: 14, lineHeight: 1.6, color: "#fff" },
-
-  sectionGray: {
-    background: "#f8fafc",
-    borderTop: "1px solid #e5e7eb",
-    borderBottom: "1px solid #e5e7eb",
-    padding: "90px 40px",
-  },
-  sectionWhite: { background: "#fff", padding: "90px 40px" },
-  sectionInner: { maxWidth: 1400, margin: "0 auto" },
-  sectionLabel: {
-    textTransform: "uppercase",
-    letterSpacing: "0.35em",
-    color: "#2b124c",
-    fontSize: 13,
-    fontWeight: 900,
-  },
-  sectionTitle: {
-    maxWidth: 850,
-    marginTop: 20,
-    fontSize: 46,
-    lineHeight: 1.15,
-    letterSpacing: "-0.035em",
-    fontWeight: 900,
-  },
-  sectionTitleCenter: {
-    marginTop: 20,
-    fontSize: 46,
-    lineHeight: 1.15,
-    letterSpacing: "-0.035em",
-    fontWeight: 900,
-  },
-  sectionIntro: { marginTop: 20, fontSize: 18, lineHeight: 1.7, color: "#475569" },
-  centerText: { maxWidth: 820, margin: "0 auto", textAlign: "center" },
-
-  fourGrid: { marginTop: 56, display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 26 },
-  threeGrid: { marginTop: 56, display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 26 },
-
-  workflowCard: {
-    background: "#fff",
-    border: "1px solid #e5e7eb",
-    borderRadius: 28,
-    padding: 28,
-    boxShadow: "0 8px 20px rgba(15,23,42,0.04)",
-  },
-  stepNumber: {
-    width: 56,
-    height: 56,
-    borderRadius: 18,
-    background: "#2b124c",
-    color: "#f9e79f",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    fontSize: 22,
-    fontWeight: 900,
-  },
-  workflowTitle: { marginTop: 26, fontSize: 22, fontWeight: 900 },
-  workflowText: { marginTop: 18, fontSize: 16, lineHeight: 1.7, color: "#475569" },
-
-  benefitCard: {
-    background: "#fff",
-    border: "1px solid #e5e7eb",
-    borderRadius: 28,
-    padding: 28,
-    boxShadow: "0 8px 20px rgba(15,23,42,0.04)",
-  },
-  valueBadge: {
-    display: "inline-flex",
-    background: "#f5ecff",
-    color: "#2b124c",
-    borderRadius: 999,
-    padding: "6px 12px",
-    fontSize: 11,
-    fontWeight: 900,
-    textTransform: "uppercase",
-    letterSpacing: "0.2em",
-  },
-
-  pricingCard: {
-    background: "#fff",
-    border: "1px solid #e5e7eb",
-    borderRadius: 28,
-    padding: 34,
-    boxShadow: "0 8px 20px rgba(15,23,42,0.04)",
-  },
-  pricingTitle: { margin: 0, fontSize: 22, fontWeight: 900 },
-  price: { marginTop: 22, fontSize: 42, fontWeight: 900 },
-  featureList: { marginTop: 28, paddingLeft: 0, listStyle: "none", color: "#475569", lineHeight: 2 },
-  salesButton: {
-    marginTop: 34,
-    display: "inline-flex",
-    background: "#2b124c",
-    color: "#fff",
-    textDecoration: "none",
-    padding: "14px 24px",
-    borderRadius: 16,
-    fontWeight: 800,
-  },
-
-  whoSection: { background: "#2b124c", color: "#fff", padding: "96px 40px" },
-  whoInner: {
-    maxWidth: 1400,
-    margin: "0 auto",
-    display: "grid",
-    gridTemplateColumns: "1fr 0.85fr",
-    gap: 70,
-    alignItems: "center",
-  },
-  goldLabel: {
-    textTransform: "uppercase",
-    letterSpacing: "0.35em",
-    color: "#f9e79f",
-    fontSize: 13,
-    fontWeight: 900,
-  },
-  whoTitle: { marginTop: 24, fontSize: 46, lineHeight: 1.15, fontWeight: 900 },
-  whoText: { marginTop: 28, fontSize: 18, lineHeight: 1.8, color: "#e2e8f0" },
-  useCaseList: { display: "grid", gap: 18 },
-  useCase: {
-    border: "1px solid rgba(255,255,255,0.15)",
-    background: "rgba(255,255,255,0.08)",
-    borderRadius: 18,
-    padding: "20px 24px",
-    fontWeight: 800,
-  },
-
-  contactSection: { background: "#fff", padding: "90px 40px" },
-  contactCard: {
-    maxWidth: 1200,
-    margin: "0 auto",
-    background: "#f8fafc",
-    border: "1px solid #e5e7eb",
-    borderRadius: 36,
-    padding: 56,
-  },
-  contactTitle: { marginTop: 24, fontSize: 52, lineHeight: 1.1, fontWeight: 900 },
-  contactText: { marginTop: 22, fontSize: 18, lineHeight: 1.7, color: "#475569" },
-  footer: {
-    borderTop: "1px solid #e5e7eb",
-    padding: "34px 40px",
-    textAlign: "center",
-    color: "#64748b",
-    fontSize: 14,
-  },
-};
