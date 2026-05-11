@@ -56,9 +56,9 @@ export default function VerseCastMarketingSite() {
   ];
 
   const pricingPlans = [
-    ["Starter", "$19/mo", ["1 church account", "1 live service session", "Control panel + presenter", "Email support"]],
-    ["Pro", "$49/mo", ["Multiple service sessions", "Team access", "Service logs", "Priority support"]],
-    ["Conference", "$199/event", ["Event-based usage", "Temporary setup support", "Presenter/operator workflow", "Ideal for conventions"]],
+    ["Starter", "$1/mo", ["1 church account", "1 live service session", "Control panel + presenter", "Email support"]],
+    ["Pro", "$1/mo", ["Multiple service sessions", "Team access", "Service logs", "Priority support"]],
+    ["Conference", "$1/event", ["Event-based usage", "Temporary setup support", "Presenter/operator workflow", "Ideal for conventions"]],
   ];
 
   const useCases = [
